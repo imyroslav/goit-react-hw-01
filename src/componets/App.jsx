@@ -1,4 +1,4 @@
-import Profile from "./Products/Profile"
+import Profile from "./profile/Profile"
 
 export default function App() {
   return (
