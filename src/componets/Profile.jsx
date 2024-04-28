@@ -1,4 +1,5 @@
-export default function Profile() {
+export default function Profile(props) {
+    console.log("props: ", props);
     return (
         <div>
   <div>
