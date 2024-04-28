@@ -1,10 +1,18 @@
 import Profile from "./profile/Profile"
+import userData from "../userData.json"
 
-export default function App() {
+
+export const App = () => {
   return (
-    <div>
-      <h1>User Data</h1>
-      <Profile/>
-    </div>
-  )
-} 
+    <>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+     </>
+  );
+};
+export default App;

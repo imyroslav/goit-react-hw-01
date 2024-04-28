@@ -1,31 +1,42 @@
-export default function Profile(props) {
-    console.log("props: ", props);
-    return (
-        <div>
-  <div>
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-      alt="User avatar"
-    />
-    <p>Petra Marica</p>
-    <p>@pmarica</p>
-    <p>Salvador, Brasil</p>
-  </div>
+import PropTypes from "prop-types";
+import css from "./Profile.module.css";
 
-  <ul>
-    <li>
-      <span>Followers</span>
-      <span>1000</span>
-    </li>
-    <li>
-      <span>Views</span>
-      <span>2000</span>
-    </li>
-    <li>
-      <span>Likes</span>
-      <span>3000</span>
-    </li>
-  </ul>
-</div>
-    )
-}
+export  const Profile = ({ name, tag, location, image, stats }) => {
+  const { followers, views, likes } = stats;
+
+  return (
+    <div className={css.container}>
+      <div className={css.information}>
+        <img className={css.avatar} src={image} alt="User avatar" width="150" />
+        <p className={css.name}>{name}</p>
+        <p className={css.tag}>@{tag}</p>
+        <p className={css.location}>{location}</p>
+      </div>
+      <ul className={css.list}>
+        <li className={css.listItem}>
+          <span>Followers</span> <span>{followers}</span>
+        </li>
+        <li className={css.listItem}>
+          <span>Views</span> <span>{views}</span>
+        </li>
+        <li className={css.listItem}>
+          <span>Likes</span> <span>{likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
+};
+
+export default Profile;
