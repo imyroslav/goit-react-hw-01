@@ -1,14 +1,11 @@
 
+import FriendListItem from "../friendlistitem/FriendListItem";
+import css from "./FrendList.module.css"
+
 export const FriendList = () => {
     return (
         <>
             <ul>
-                <li>
-                    <FriendListItem />
-                </li>
-                <li>
-                    <FriendListItem />
-                </li>
                 <li>
                     <FriendListItem />
                 </li>
@@ -18,13 +15,7 @@ export const FriendList = () => {
     );
 };
 
-const FriendListItem = () => {
-    <div>
-        <img src="" alt="Avatar" width="48" />
-        <p>Friend name</p>
-        <p>Friend status</p>
-    </div>
-}
+
 
 export default FriendList;
 
