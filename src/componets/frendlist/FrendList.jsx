@@ -1,8 +1,14 @@
 
-const FriendList = () => {
+export const FriendList = () => {
     return (
         <>
             <ul>
+                <li>
+                    <FriendListItem />
+                </li>
+                <li>
+                    <FriendListItem />
+                </li>
                 <li>
                     <FriendListItem />
                 </li>
