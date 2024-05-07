@@ -1,15 +1,21 @@
 .name {
+    display: flex;
+    justify-content: center;
     font-weight: 700;
     margin-bottom: 0;
 }
 
 .isOnline {
+    display: flex;
+    justify-content: center;
     font-weight: 400;
     color: green;
     margin: 0;
 }
 
 .isOffline {
+    display: flex;
+    justify-content: center;
     font-weight: 400;
     color: red;
     padding: 8px 0;
