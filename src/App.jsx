@@ -1,10 +1,9 @@
-import Profile from "./componets/profile/Profile";
+import Profile from "./components/profile/Profile";
 import userData from "./userData.json";
-// import "modern-normalize";
 import friends from "./Friends.json";
-import FriendList from "./componets/frendlist/FrendList";
+import FriendList from "./components/frendlist/FrendList";
 import transactions from "./transactions.json";
-import TransactionHistory from "./componets/transactionHistory/TransactionHistory";
+import TransactionHistory from "./components/transactionHistory/TransactionHistory";
 
 export const App = () => {
   return (
